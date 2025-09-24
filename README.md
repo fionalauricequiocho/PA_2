@@ -1,5 +1,7 @@
 ## Programming Assignment 2 – NumPy
 
+_____________________________________________________________________________________________________________________________________
+
 ## Summary
 
 This repository contains solutions to programming experiments involving NumPy arrays.
@@ -10,12 +12,15 @@ Creating and reshaping arrays
 Normalizing data
 
 Filtering elements based on conditions
+_____________________________________________________________________________________________________________________________________
 
 The problems included are:
 
-Normalization Problem – Generate a random matrix and normalize it.
+Normalization Problem – Generate a random matrix and normalize it
 
-Divisible by 3 Problem – Generate squares of integers, reshape into a matrix, and extract values divisible by 3.
+Divisible by 3 Problem – Generate squares of integers, reshape into a matrix, and extract values divisible by 3
+
+_____________________________________________________________________________________________________________________________________
 
 ## Problem Descriptions and Solutions
 
@@ -26,7 +31,7 @@ Create a random 5×5 NumPy array, compute its mean and standard deviation, norma
 
 Code Snippet:
 
-<pre>
+```python
 import numpy as np
 
 X = np.random.random((5, 5))
@@ -42,7 +47,9 @@ X_normalized = (X - mean_X) / std_X
 X_normalized
 
 np.save("X_normalized.npy", X_normalized)
-</pre>
+```
+
+_____________________________________________________________________________________________________________________________________
 
 Explanation:
 
@@ -80,13 +87,17 @@ X−μ
 
 np.save() saves the normalized array in .npy format.
 
-Example Output (sample values):
+Example Output using sample values:
 
 Mean of X: 0.4931
+
 Standard Deviation of X: 0.2846
+
 Normalized X:
  [[-1.05  0.24 ...]
   [ 0.76 -0.43 ...]]
+
+_____________________________________________________________________________________________________________________________________
 
 ## 2. Divisible by 3 Problem
 
@@ -94,7 +105,7 @@ Problem:
 Create a 10 x 10 ndarray with the squares of the first 100 positive integers, then determine the elements divisible by 3, and lastly save as div_by_3.npy
 
 Code Snippet:
-<pre> 
+``` python
 import numpy as np
 
 numbers = np.arange(1, 101)  # integers 1 to 100
@@ -110,7 +121,7 @@ div_by_3
 
 
 np.save("div_by_3.npy", div_by_3)
- </pre>
+```
 
 Explanation:
 
@@ -124,7 +135,7 @@ A[A % 3 == 0] → filters elements divisible by 3.
 
 np.save() → stores the result in .npy format.
 
-Example Output (sample values):
+Example Output using sample values:
 
 10x10 ndarray of squares:
  [[   1    4    9 ...]
@@ -134,9 +145,13 @@ Example Output (sample values):
 Elements divisible by 3:
  [  9  36  81 144 225 ... 9801]
 
+_____________________________________________________________________________________________________________________________________
+
 ## Libraries Used
 
 NumPy – for array creation, reshaping, random generation, mathematical operations, and saving .npy files.
+
+_____________________________________________________________________________________________________________________________________
 
 ## Conclusion
 
